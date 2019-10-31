@@ -1,0 +1,106 @@
+
+/* ========================= Common Function ======================*/
+@mixin border-radius($radius) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+
+/* ==========================Configuration======================*/
+
+/* Font */
+$font_size: 15px;
+$font_name: Neucha;
+
+/* Color */
+$body_bg_color: #fff;
+$body_font_color: #3c3c3c;
+
+$base_font_color: #212121;
+$light_base_font: #616161;
+$light_2_base_font: #9e9e9e;
+
+$link_color: #263238;
+$link_hover_color: #455a64;
+
+$base_border: #9e9e9e;
+
+
+/* ------- General Settings -------*/
+html,
+body{
+  font-size: $font_size;
+  color:$body_font_color;
+}
+
+/* -- 扩展纵向高度 -- */
+@for $i from 1 through 10 {
+  .r#{$i} { height: 10% * $i; }
+}
+
+/* -- 更改row默认padding-top-bottom:0 -- */
+.col{
+  &.col-section{
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+}
+
+div{
+  &.heightfull{
+    height: 100%;
+  }
+}
+
+.icon-img{
+  display: inline;
+  height: 1em;
+}
+
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+  margin: 0 !important;
+  width: auto !important;
+  @include border-radius(0px);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+
+
+
+
+
+
+
+/* ==========================Common Component======================*/
+
+
+
+
+
+
+/* ------- Index Page-------*/
+
+
+
+/* ------- Search -------*/
+
+
