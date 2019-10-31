@@ -7,6 +7,14 @@
     <router-view/>
   </div>
 </template>
+<script>
+  // @ is an alias to /src
+  import './assets/js/materialize'
+  import './assets/sass/materialize.scss'
+
+  export default {
+  }
+</script>
 
 <style lang="scss">
 #app {
