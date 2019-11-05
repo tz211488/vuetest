@@ -42,7 +42,6 @@
 
 <script>
     $(document).ready(function(){
-        let containerX = $('.menu-item-full').offset().left;
         let headerMenuDropDownFull = {
             alignment:'center',
             hover:true,

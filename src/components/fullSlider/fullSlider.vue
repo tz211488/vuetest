@@ -1,5 +1,4 @@
 <template>
-
     <div class="carousel carousel-slider center full-list">
         <div class="carousel-fixed-item center">
             <a class="btn waves-effect white grey-text darken-text-2">button</a>
