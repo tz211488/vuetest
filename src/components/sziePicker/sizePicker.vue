@@ -1,5 +1,5 @@
 <template>
-    <li class="size-picker">
+    <li class="size-picker active">
         <div class="collapsible-header">Size</div>
         <div class="collapsible-body">
             <ul>

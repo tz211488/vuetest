@@ -13,20 +13,22 @@
           <img src="../assets/image/banner.jpg" />
         </div>
     </div>
-    <div class="page-main">
-        <section class="collection-sidebar">
+    <div class="page-main row">
+        <section class="collection-sidebar col m3">
             <ul class="collapsible expandable">
                 <collapsible-collection />
                 <color-picker />
                 <size-picker />
                 <price-range />
-                <custom-block-sidenav />
+                <sidenav-product />
+                <sidenav-custom />
             </ul>
         </section>
-        <section class="collection-content">
+        <section class="collection-content col m9">
             <div class="collection-top">
             </div>
             <div class="collection-main">
+                <collection-bar-wrapper />
             </div>
             <div class="collection-foot">
             </div>
@@ -43,12 +45,19 @@
     import sizePicker from "../components/sziePicker/sizePicker";
     import priceRange from "../components/priceRange/priceRange";
     import customBlockSidenav from "../components/customBlock/customBlockSidenav";
+    import sidenavProduct from "../components/sidenavProduct/sidenavProduct";
+    import sidenavCustom from "../components/sidenavCustom/sidenavCustom";
+    import collectionBarWrapper from "../components/collectionBar/collectionBarWrapper";
     $(document).ready(function(){
-        $('.collapsible').collapsible();
+        let sidenavCollapsible = {
+            accordion:false
+        }
+        $('.collapsible').collapsible(sidenavCollapsible);
+
     });
     export default {
         name: "Collection",
-        components:{collapsibleCollection, colorPicker, sizePicker, priceRange, customBlockSidenav}
+        components:{collapsibleCollection, colorPicker, sizePicker, priceRange, sidenavProduct,sidenavCustom,collectionBarWrapper}
     }
 </script>
 
@@ -76,9 +85,8 @@
     }
 
     .collection-sidebar{
-        width:25%;
-        height: 700px;
-        background: #00acc1;
+        height: 1400px;
+
     }
     .collection-content{
         width:75%;
